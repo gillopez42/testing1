@@ -1,0 +1,21 @@
+name: emit-fcov
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - earthaccess          # NASA Earthdata search/auth/download
+  - gdal
+  - rasterio
+  - rioxarray
+  - xarray
+  - numpy
+  - pandas<3          # pandas 3.0.x has a circular-import bug in np_datetime on conda-forge/osx-arm64
+  - geopandas
+  - fiona
+  - shapely
+  - h5py
+  - h5netcdf
+  - spectral             # spectral image I/O/analysis (ENVI, etc.)
+  - matplotlib
+  - jupyterlab
+  - dask                 # lazy/chunked raster ops for stacking scenes
